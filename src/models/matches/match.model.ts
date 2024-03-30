@@ -16,17 +16,6 @@ export default class Match extends Model {
 
   @Column({
     type: DataType.INTEGER,
-    field: "team_id",
-    onUpdate: 'CASCADE',
-    onDelete: 'CASCADE',
-    references: {
-        model: Team,
-        key: "id"
-    }
-  })
-
-  @Column({
-    type: DataType.INTEGER,
     field: "visiting_team_id",
     onUpdate: 'CASCADE',
     onDelete: 'CASCADE',
@@ -75,15 +64,15 @@ export default class Match extends Model {
 
   @Column({
     type: DataType.INTEGER,
-    field: "result_local"
+    field: "local_result"
   })
-  result_local?: string;
+  local_result?: number;
 
   @Column({
     type: DataType.INTEGER,
     field: "visiting_result"
   })
-  visiting_result?: string;
+  visiting_result?: number;
 
   @Column({
     type: DataType.TINYINT,

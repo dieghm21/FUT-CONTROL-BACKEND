@@ -66,7 +66,8 @@ export default class MatchEvent extends Model {
 
   @Column({
     type: DataType.TINYINT,
-    field: "state"
+    field: "state",
+    defaultValue: 1
   })
   state?: number;
 
